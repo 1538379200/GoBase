@@ -51,7 +51,7 @@ type result struct {
 	Args    string            `json:"args"`
 	Headers map[string]string `json:"headers"`
 	Origin  string            `json:"origin"`
-	Url     string            `json:"url"`
+	Url     string            `json:"url" volid:"123"` // 标签，解析时使用url作为名称，volid可以做验证
 }
 
 func JsonParse() {
