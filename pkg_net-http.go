@@ -112,7 +112,7 @@ func PostWithParam() {
 	data["name"] = "zhaofan"
 	data["age"] = "23"
 	bytesData, _ := json.Marshal(data) // 序列化成json格式
-	req, _ := http.NewRequest("POST", "http://httpbin.org/post", bytes.NewReader(bytesData))
+	req, _ := http.NewRequest("Post", "http://httpbin.org/post", bytes.NewReader(bytesData))
 	resp, _ := client.Do(req)
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
